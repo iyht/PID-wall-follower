@@ -74,7 +74,8 @@ int main(int argc, char **argv) {
 
   // todo: set up the command publisher to publish at topic '/husky_1/cmd_vel'
   // using geometry_msgs::Twist messages
-  cmd_pub = nh.advertise<geometry_msgs::Twist>("/husky_1/husky_velocity_controller/cmd_vel", 1000);
+  //cmd_pub = nh.advertise<geometry_msgs::Twist>("/husky_1/husky_velocity_controller/cmd_vel", 1000);
+  cmd_pub = nh.advertise<geometry_msgs::Twist>("/husky_1/cmd_vel", 1000);
 
   cte_pub = nh.advertise<std_msgs::Float32>("/husky_1/cte", 10);
   // todo: set up the laser scan subscriber
